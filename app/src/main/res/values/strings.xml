@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">Flashcards</string>
+
+    <string-array name="pizza_name">
+        <item>کلمه</item>
+        <item>کلمه</item>
+        <item>کلمه</item>
+        <item>کلمه</item>
+        <item>کلمه</item>
+        <item>کلمه</item>
+        <item>کلمه</item>
+        <item>کلمه</item>
+        <item>کلمه</item>
+    </string-array>
+    <string-array name="pizza_description">
+        <item>توضیح</item>
+        <item>توضیح</item>
+        <item>توضیح</item>
+        <item>توضیح</item>
+        <item>توضیح</item>
+        <item>توضیح</item>
+        <item>توضیح</item>
+        <item>توضیح</item>
+        <item>توضیح</item>
+    </string-array>
 </resources>
