@@ -85,8 +85,12 @@ public class SecondLevelAdapter extends BaseExpandableListAdapter {
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //اسم درس ها کلیک میشه
                 Intent intent = new Intent(context.getApplicationContext(), MainActivity2.class);
                 intent.putExtra("level",textView.getText().toString());
+                intent.putExtra("g",groupPosition);
+                intent.putExtra("g",groupPosition);
+                intent.putExtra("ch",childPosition);
                 view.getContext().startActivity(intent);
             }
         });
@@ -115,5 +119,7 @@ public class SecondLevelAdapter extends BaseExpandableListAdapter {
     }
 
     @Override
-    public boolean isChildSelectable(int groupPosition, int childPosition) { return true; }
+    public boolean isChildSelectable(int groupPosition, int childPosition) {
+        return true;
+    }
 }

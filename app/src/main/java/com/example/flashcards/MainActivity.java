@@ -6,19 +6,23 @@ import android.os.Bundle;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private ExpandableListView expandableListView;
+    BottomNavigationView bottomNavigationView;
 
-    Integer[] icon = {R.drawable.filed0, R.drawable.filed1, R.drawable.filed2, R.drawable.filed3, R.drawable.filed4, R.drawable.filed5};
+//    Integer[] icon = {R.drawable.filed0, R.drawable.filed1, R.drawable.filed2, R.drawable.filed3, R.drawable.filed4, R.drawable.filed5};
     String[] filed = {"شبکه و نرم افزار رایانه","حسابداری","پویانمایی","فوتوگرافیک","گرافیک","نقاشی"};
     String[] level = {"دهم","یازدهم","دوازدهم"};
+    String[] level2 = {"دهم"};
 
     //کامپیوتر
-    String[] filed0level0 = {"دانش فنی پایه", "نصب و راه اندازی سیستم های رایانه ای", "تولید محتوای الکترونیک و برنامه سازی", "نقشه کشی فنی رایانه ای"};
+    String[] filed0level0 = {"دانش فنی پایه ", "نصب و راه اندازی سیستم های رایانه ای", "تولید محتوای الکترونیک و برنامه سازی", "نقشه کشی فنی رایانه ای"};
     String[] filed0level1 = {"توسعه برنامه سازی و پایگاه داده", "پیاده سازی سیستم های اطلاعاتی و طراحی وب"};
     String[] filed0level2 = {"دانش فنی تخصصی", "نصب و نگهداری تجهیزات شبکه و سخت افزار", "تجارت الکترونیک و امنیت شبکه"};
     //حسابداری
@@ -39,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
     String[] filed4level2 = {"مبانی تصویرسازی", "پایه و اصول صفحه آرایی", "خط در گرافیک"};
     //نقاشی
     String[] filed5level0 = {"طراحی (1)", "مبانی هنرهای تجسمی", "علم مناظر و مرایا", "عکاسی (1)", "تاریخ هنر ایران"};
-    String[] filed5level1 = {"به زودی..."};
-    String[] filed5level2 = {"به زودی..."};
+//    String[] filed5level1 = {"به زودی..."};
+//    String[] filed5level2 = {"به زودی..."};
 
     LinkedHashMap<String, String[]> thirdLevel0 = new LinkedHashMap<>();
     LinkedHashMap<String, String[]> thirdLevel1 = new LinkedHashMap<>();
@@ -63,7 +67,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setUpAdapter();
+
+        bottomNavigationView=findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.getMenu().findItem(R.id.item_home).setChecked(true);
     }
+
 
     private void setUpAdapter() {
         secondLevel.add(level);
@@ -71,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         secondLevel.add(level);
         secondLevel.add(level);
         secondLevel.add(level);
-        secondLevel.add(level);
+        secondLevel.add(level2);
 
         thirdLevel0.put(level[0], filed0level0);
         thirdLevel0.put(level[1], filed0level1);
@@ -93,9 +101,9 @@ public class MainActivity extends AppCompatActivity {
         thirdLevel4.put(level[1], filed4level1);
         thirdLevel4.put(level[2], filed4level2);
 
-        thirdLevel5.put(level[0], filed5level0);
-        thirdLevel5.put(level[1], filed5level1);
-        thirdLevel5.put(level[2], filed5level2);
+        thirdLevel5.put(level2[0], filed5level0);
+//        thirdLevel5.put(level[1], filed5level1);
+//        thirdLevel5.put(level[2], filed5level2);
 
 
         data.add(thirdLevel0);
