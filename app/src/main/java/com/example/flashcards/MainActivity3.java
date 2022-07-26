@@ -2,20 +2,29 @@ package com.example.flashcards;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+<<<<<<< HEAD
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+=======
+import android.os.Bundle;
+>>>>>>> origin/master
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity3 extends AppCompatActivity {
     TextView thirdWord,thirdWordDescription;
+<<<<<<< HEAD
     ImageButton arrow_back;
     String data1,data2;
     //MContext context;
+=======
+
+    String data1,data2;
+>>>>>>> origin/master
 
 
     @Override
@@ -25,11 +34,15 @@ public class MainActivity3 extends AppCompatActivity {
 
         thirdWord = findViewById(R.id.textViewWord);
         thirdWordDescription = findViewById(R.id.textViewWordDescription);
+<<<<<<< HEAD
         arrow_back = findViewById(R.id.arrow_back);
+=======
+>>>>>>> origin/master
 
         getData();
         setData();
 
+<<<<<<< HEAD
         arrow_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,6 +50,8 @@ public class MainActivity3 extends AppCompatActivity {
                 startActivity(intent3);
             }
         });
+=======
+>>>>>>> origin/master
 
 
     }
