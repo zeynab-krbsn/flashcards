@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,7 +29,6 @@ public class MainActivity3 extends AppCompatActivity {
 
         getData();
         setData();
-
 
         arrow_back.setOnClickListener(new View.OnClickListener() {
             @Override

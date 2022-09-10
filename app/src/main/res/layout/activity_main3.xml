@@ -42,18 +42,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayoutActionBar"
-    android:padding="20dp"
-    />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/flashcard_background"
-        app:cardCornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         >
     <TextView
         android:id="@+id/textViewWord"
@@ -77,4 +65,8 @@
         android:layout_centerVertical="true"
         android:layout_marginTop="300dp"/>
     </RelativeLayout>
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
